@@ -2,6 +2,6 @@
     set $upstream_mongo_express http://mongo-express.ethan.svc.cluster.local:8086;
     location /mongo {
          rewrite /mongo/(.*)$ /$1 break;
-         proxy_pass $upstream_mongo_express
+         proxy_pass $upstream_mongo_express;
     }
 ###PROXY: MONGO-EXPRESS###
